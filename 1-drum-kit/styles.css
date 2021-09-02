@@ -1,0 +1,83 @@
+body {
+    background-image: url("images/neiman.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(18, 231, 160);
+    font-size: 3rem;
+}
+
+.key {
+    font-size: 1.6rem;
+    position: relative;
+    bottom: 50px;
+    color: rgb(241, 37, 150);
+}
+
+p {
+    position: relative;
+    top: 30px;
+    color: aqua;
+}
+
+button {
+    width: 90px;
+    height: 100px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    top: 300px;
+}
+
+.button-bass {
+    background-image: url("images/bass-drum.jpg");
+    background-size: cover;
+}
+
+.button-floor {
+    background-image: url("images/floor-tom.jpg");
+    background-size: cover;
+}
+
+.button-snare {
+    background-image: url("images/snare-drum.jpg");
+    background-size: cover;
+}
+
+.button-tom {
+    background-image: url("images/tom-tom.jpg");
+    background-size: cover;
+}
+
+.button-hat {
+    background-image: url("images/hat.jpg");
+    background-size: cover;
+}
+
+.button-crash {
+    background-image: url("images/crash.jpg");
+    background-size: cover;
+}
+
+.button-ride {
+    background-image: url("images/ride.jpg");
+    background-size: cover;
+}
+
+.button-splash {
+    background-image: url("images/splash.jpg");
+    background-size: cover;
+}
+
+.button-china {
+    background-image: url("images/china.jpg");
+    background-size: cover;
+}
