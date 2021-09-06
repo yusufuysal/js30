@@ -9,5 +9,10 @@ h3 {
 }
 
 #b-img {
-    width: 80vw;
+    width: 100vw;
+    filter: blur(4px);
+}
+
+#blur-title {
+    margin-left: 50px;
 }
