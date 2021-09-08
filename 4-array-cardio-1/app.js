@@ -91,6 +91,14 @@ sorted.forEach((inventor) =>
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
+const ages = []
+inventors.forEach((inventor) => ages.push(inventor.passed - inventor.year))
+
+const reducer = (previous, current) => previous + current
+const sumOfAges = ages.reduce(reducer)
+document.write(
+    `<br><h4>Sum of ages of all the inventors: <h5>${sumOfAges}</h5></h4>`
+)
 
 // 5. Sort the inventors by years lived
 
