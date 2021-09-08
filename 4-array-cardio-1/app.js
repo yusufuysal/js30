@@ -63,12 +63,10 @@ const birthDateFiltered = inventors.filter(
     (inventor) => inventor.year > 1499 && inventor.year < 1600
 )
 
-document.write("<h4> Inventors who were born in 1500's:<h4>")
+document.write("<h4> Inventors who were born in 1500's:")
 birthDateFiltered.forEach((inventor) =>
-    document.write(`<h5> ${inventor.first}  ${inventor.last} </h5>`)
+    document.write(`<h5>${inventor.first}  ${inventor.last}</h5>`)
 )
-
-document.write("<br>")
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
@@ -76,11 +74,20 @@ const firstAndLast = inventors.map(
     (inventor) => `${inventor.first} ${inventor.last}`
 )
 
-document.write("<h4> Fullnames of all the inventors:<h4>")
-firstAndLast.forEach((inventor) => document.write(`<h5>${inventor} <h5>`))
+document.write("<br><h4> Fullnames of all the inventors:")
+firstAndLast.forEach((inventor) => document.write(`<h5>${inventor} </h5>`))
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
+
+const sorted = inventors.sort((inv1, inv2) => inv2.year - inv1.year)
+document.write("<br><h4>Inventors oldest to youngest: </h4>")
+
+sorted.forEach((inventor) =>
+    document.write(
+        `<h5>${inventor.first} ${inventor.last} ${inventor.year}</h5> `
+    )
+)
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?

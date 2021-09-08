@@ -7,10 +7,12 @@ h4 {
     display: inline-block;
     color: rgb(241, 119, 4);
     margin-right: 20px;
+    margin-left: 10px;
 }
 
 h5 {
     display: inline-block;
     color: rgb(238, 157, 207);
     margin-right: 12px;
+    margin-left: 10px;
 }
