@@ -105,7 +105,7 @@ document.write(
 const sortedAsLifetime = inventors.sort(
     (inv1, inv2) => inv2.passed - inv2.year - (inv1.passed - inv1.year)
 )
-console.log(sortedAsLifetime)
+
 document.write("<br><h4>Inventors most lived to least: </h4>")
 sortedAsLifetime.forEach((inventor) =>
     document.write(
@@ -147,3 +147,13 @@ const data = [
     "car",
     "truck",
 ]
+
+const occurrences = data.reduce(function (acc, curr) {
+    return acc[curr] ? ++acc[curr] : (acc[curr] = 1), acc
+}, {})
+console.log(occurrences)
+
+document.write(
+    "<br><h4> Number of occurences of each item of data array: </h4>"
+)
+document.write(`<h5> ${JSON.stringify(occurrences)}  </h5>`)
