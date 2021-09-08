@@ -102,6 +102,19 @@ document.write(
 
 // 5. Sort the inventors by years lived
 
+const sortedAsLifetime = inventors.sort(
+    (inv1, inv2) => inv2.passed - inv2.year - (inv1.passed - inv1.year)
+)
+console.log(sortedAsLifetime)
+document.write("<br><h4>Inventors most lived to least: </h4>")
+sortedAsLifetime.forEach((inventor) =>
+    document.write(
+        `<h5>${inventor.first} ${inventor.last} ${
+            inventor.passed - inventor.year
+        }</h5> `
+    )
+)
+
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
