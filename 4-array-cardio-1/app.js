@@ -65,11 +65,19 @@ const birthDateFiltered = inventors.filter(
 
 document.write("<h4> Inventors who were born in 1500's:<h4>")
 birthDateFiltered.forEach((inventor) =>
-    document.write(`<p> ${inventor.first}` + ` ${inventor.last} <p>`)
+    document.write(`<h5> ${inventor.first}  ${inventor.last} </h5>`)
 )
+
+document.write("<br>")
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
+const firstAndLast = inventors.map(
+    (inventor) => `${inventor.first} ${inventor.last}`
+)
+
+document.write("<h4> Fullnames of all the inventors:<h4>")
+firstAndLast.forEach((inventor) => document.write(`<h5>${inventor} <h5>`))
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest

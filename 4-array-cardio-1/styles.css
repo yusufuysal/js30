@@ -1,18 +1,16 @@
 body {
     margin: 0;
-    background-color: rgb(1, 17, 17);
-}
-
-h4,
-p {
-    display: inline-block;
-    margin: 5px 10px 0 5px;
+    background: rgb(0, 18, 24);
 }
 
 h4 {
-    color: rgb(204, 80, 8);
+    display: inline-block;
+    color: rgb(241, 119, 4);
+    margin-right: 20px;
 }
 
-p {
-    color: plum;
+h5 {
+    display: inline-block;
+    color: rgb(238, 157, 207);
+    margin-right: 12px;
 }
