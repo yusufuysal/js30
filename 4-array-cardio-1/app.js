@@ -121,6 +121,14 @@ sortedAsLifetime.forEach((inventor) =>
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 
+const sortedAsLastName = inventors.sort((inv1, inv2) =>
+    inv1.last.localeCompare(inv2.last)
+)
+document.write(`<br><h4> Investors sorted alphabetically by last name: </h4>`)
+sortedAsLastName.forEach((inventor) =>
+    document.write(`<h5> ${inventor.first} ${inventor.last} </h5>`)
+)
+
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = [
