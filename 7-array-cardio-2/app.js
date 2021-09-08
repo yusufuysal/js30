@@ -17,7 +17,21 @@ const comments = [
 
 // Some and Every Checks
 // Array.prototype.some() // is at least one person 19 or older?
+const currentYear = new Date().getFullYear()
+const olderSome = (person) => currentYear - person.year >= 19
+if (people.some(olderSome) === true) {
+    document.write(`<p>There is at least one person who is 19 or older</p>`)
+} else {
+    document.write(`<p>Everybody is under 19</p>`)
+}
+
 // Array.prototype.every() // is everyone 19 or older?
+const olderAll = (person) => currentYear - person.year >= 19
+if (people.every(olderSome) === true) {
+    document.write(`<p>Everybody is 19 or older</p>`)
+} else {
+    document.write(`<p>There is at least one person under 19</p>`)
+}
 
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
