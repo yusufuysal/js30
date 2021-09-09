@@ -15,6 +15,9 @@ const comments = [
     { text: "Nice Nice Nice!", id: 542328 },
 ]
 
+//writing initial objects
+document.write(`${JSON.stringify(people)} <br> ${JSON.stringify(comments)}`)
+
 // Some and Every Checks
 // Array.prototype.some() // is at least one person 19 or older?
 const currentYear = new Date().getFullYear()
@@ -45,3 +48,17 @@ document.write(
 // Array.prototype.findIndex()
 // Find the comment with this ID
 // delete the comment with the ID of 823423
+const wantedIndex = (comment) => comment.id === 823423
+
+document.write(
+    `<p>The index of comment with requested ID is: ${comments.findIndex(
+        wantedIndex
+    )}</p>`
+)
+
+const removed = comments.splice(1, 1)
+document.write(
+    `<br><p>The last version of comments object after delete the comment with requested id: <br><br> ${JSON.stringify(
+        comments
+    )}</p>`
+)
