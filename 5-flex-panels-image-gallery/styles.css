@@ -1,5 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container div {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20vw;
+
+    cursor: pointer;
+}
+
+.box-1 {
+    background-image: url("images/img1.jpg");
+}
+
+.box-2 {
     background-image: url("images/img2.jpg");
-    background-size: cover;
+}
+
+.box-3 {
+    background-image: url("images/img3.jpg");
+}
+
+.box-4 {
+    background-image: url("images/img4.jpg");
+}
+
+.box-5 {
+    background-image: url("images/img5.jpg");
+}
+
+.box {
+    flex: 1;
+    transition: flex 0.4s ease-in;
+}
+.active {
+    flex: 2;
 }
