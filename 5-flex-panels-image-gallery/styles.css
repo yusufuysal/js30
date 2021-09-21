@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
 * {
     box-sizing: border-box;
 }
@@ -8,43 +10,86 @@ body {
 
 .container {
     display: flex;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
 }
 
 .container div {
-    background-size: auto 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 20vw;
-
     cursor: pointer;
 }
 
 .box-1 {
-    background-image: url("images/img1.jpg");
+    background-image: url("https://images.unsplash.com/photo-1620751807252-46dd26db740c?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM4fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
 .box-2 {
-    background-image: url("images/img2.jpg");
+    background-image: url("https://images.unsplash.com/photo-1578654991424-bd24d2d272af?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU2fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
 .box-3 {
-    background-image: url("images/img3.jpg");
+    background-image: url("https://images.unsplash.com/photo-1596226799589-ea489243e102?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDYyfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
 .box-4 {
-    background-image: url("images/img4.jpg");
+    background-image: url("https://images.unsplash.com/photo-1629812456605-4a044aa38fbc?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDIxMHxibzhqUUtUYUUwWXx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
 .box-5 {
-    background-image: url("images/img5.jpg");
+    background-image: url("https://images.unsplash.com/photo-1626209474502-a4857f930996?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI3MXxibzhqUUtUYUUwWXx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
 }
 
 .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 1;
-    transition: flex 0.4s ease-in;
+    border: ridge rgba(170, 50, 220, 0.6);
+    transition: 0.8s cubic-bezier(0.48, -0.63, 0.69, 0.69);
+    position: relative;
+    overflow: hidden;
 }
 .active {
-    flex: 2;
+    flex: 4.5;
+}
+
+.active p {
+    font-size: 5em;
+}
+
+p {
+    font: italic 4em "PT Serif", serif;
+    color: rgb(252, 252, 252);
+    margin: auto;
+    transition: 0.6s font-size ease-in;
+}
+
+.top {
+    color: white;
+    text-shadow: rgb(97, 85, 37) 1px 0 10px;
+    position: absolute;
+    top: -10%;
+    transition: 0.9s cubic-bezier(0.48, -0.63, 0.69, 0.69);
+}
+
+.bottom {
+    color: white;
+    text-shadow: rgb(58, 46, 2) 1px 0 10px;
+    position: absolute;
+    bottom: -10%;
+    transition: 0.9s cubic-bezier(0.48, -0.63, 0.69, 0.69);
+}
+
+.active .top {
+    font-size: 3.5em;
+    top: 0.1em;
+}
+
+.active .bottom {
+    font-size: 3.5em;
+    bottom: 0.1em;
 }
