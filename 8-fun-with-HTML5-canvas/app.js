@@ -3,25 +3,27 @@ const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 
 canvas.width = window.innerWidth
-canvas.height = window.innerHeight
 
 ctx.strokeStyle = "#BADA55"
 ctx.lineJoin = "round"
 ctx.lineCap = "round"
+ctx.lineWidth = 10
 
 let isDrawing = false
 
 let x = 0
 let y = 0
+let hue = 0
 
 function drawLine(ctx, x1, y1, x2, y2) {
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`
     ctx.beginPath()
-    ctx.strokeStyle = "black"
-    ctx.lineWidth = 1
     ctx.moveTo(x1, y1)
     ctx.lineTo(x2, y2)
     ctx.stroke()
     ctx.closePath()
+    hue++
+    ctx.lineWidth += 1
 }
 
 canvas.addEventListener("mousedown", (e) => {
@@ -44,5 +46,6 @@ window.addEventListener("mouseup", (e) => {
         x = 0
         y = 0
         isDrawing = false
+        ctx.lineWidth = 10
     }
 })
