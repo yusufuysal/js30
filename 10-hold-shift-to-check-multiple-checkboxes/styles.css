@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: url("https://images.unsplash.com/photo-1560174038-da43ac74f01b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hlc3N8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")
+        no-repeat center center fixed;
+    background-size: cover;
+}
